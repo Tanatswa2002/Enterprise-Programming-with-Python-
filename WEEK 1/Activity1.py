@@ -1,8 +1,15 @@
 import random
 class User:
-    def __init__(self, username, password):
+    def __init__(self, username):
         self.username = username
-        self.password = password
+        self.__password = None
+
+
+    def setPassword(self,password):
+        self.__password = password
+
+    def getpassword(self):
+        return self.__password
 
     def login(self):
         flag = 0
@@ -27,6 +34,36 @@ class User:
         return True
 
 
+#child classes of 'USER'
+
+class Customer(User):
+
+    def __init__(self, type):
+        self.type = 'Customer'
+
+    def getUserType(self):
+        return self.type
+
+
+class RestrauntOwner(User):
+
+    def __init__(self, type):
+        self.type = 'Restraunt Owner'
+
+    def getUserType(self):
+        return self.type
+
+
+class DeliveryPerson(User):
+
+    def __init__(self, type):
+        self.type = 'Delivery Person'
+
+    def getUserType(self):
+        return self.type
+
+
+
 class Restraunt:
 
     def __init__(self, name,location,menu):
@@ -44,6 +81,8 @@ class Restraunt:
          print(f"Menu for {self.name} located at {self.location}:")
          for item in self.menu:
             print(f"{self.item_no} : {self.menu}")
+
+    def CreateMenu(self,menu):
 
 class Menu:
     #note: use .append to add items to menu as oppossed to 'meu += item' this
@@ -70,4 +109,6 @@ class Order(User):
        
     def track_order(self):
         pass
+
+
 
