@@ -1,0 +1,14 @@
+Encapsulation:
+- Encapsulation allows proh=grammers to bndle attributes with their associated methods, this is so that only ethods a part of the same class as te attributes ca make any mdoifcations to 
+data(attributes) of the class.
+- Why is this importanat if programmer has access tp source code and can still modify this data?
+    * Encapsulation is meant to protect code from accidental misuse, where a programmer could msiatkenly interrupt the internal data by modifying the data incorrectly 
+    * It is not meant for prgrammers with access to teh cod who ish to interact with the cod maliciously
+    *Establishes clear interfaces, maiantains consistency and reliability becaue users of the classes only interact with the class via associated methods
+    
+
+-Abstraction:
+-Abstraction deals with what a class shpuld have however the impmeentatio of these 
+fuctions are depdnet on the sub-class involved
+- this si because a lot of classes could have the same blueprint however how the blueprint is 
+impmeneted is dependent on the actual class.
